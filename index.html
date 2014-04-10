@@ -14,7 +14,9 @@
       $(document).ready(function() {
 
         function wordCount(fragment) {
-          return fragment.trim().split(/\s+/).length;
+          if (!fragment) {
+						
+					return fragment.trim().split(/\s+/).length;
         }
         createExample('Word Count', {
           description: 'Create a function that returns the number of words in \
@@ -28,6 +30,9 @@
             {
               input: '  ignore  spaces  ',
               output: 2
+							
+							input: null
+							output: 0
             }
           ]
         });
